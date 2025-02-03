@@ -1,3 +1,8 @@
+He creado una nueva clase `GameBase` para que la lógica de cada juego se maneje en un archivo separado. Esto hace que el `gameService` sea más escalable y mejora la base de código en general. Si añadimos muchos juegos, el `gameService` podría convertirse en un "Frankenstein". 
+
+He cambiado la lógica a un sistema de acciones que son manejadas por cada juego según su configuración. Los juegos se registran en el `gameRegistry`, lo que hace que todo sea más localizable y fácil de depurar por cada juego. Además, la lógica de ranking ahora se centraliza por juego en lugar de tenerla en la interfaz de usuario.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -14,21 +19,6 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## How to deploy
-1. Run `AWS_PROFILE=default sh deploy.sh` in your computer terminal
-# games-app
